@@ -1,38 +1,228 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  
+}
+
+/* ---------------Main--------------- */
+.app-main {
+  background-color: rgb(4, 4, 4);
+  height: 475vh;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+
+/* ---------------Header--------------- */
+.header {
+  max-width: 1000px;
+  width: 100vw;
+  height: 75px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1000px;
+  /* -----For Children----- */
+  display: flex;
+	justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-links-desktop {
+  width: 300px;
+  /* -----For Children----- */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* ---------------Dropdown Menu--------------- */
+.dropdown {
+  display: none;
+  justify-content: space-around;
+}
+
+.dropdown-button {
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  height: 30px;
+  width: 70px;
+  margin-right: 40px;
+}
+
+.dropdown-list {
+  background-color: white;
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  top: 75px;
+  /* -----For Children----- */  
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.dropdown-links {
+  color: rgb(54, 54, 54);
+  text-decoration: none;
+}
+
+
+/* ---------------Sections General--------------- */
+.section {
+  height: 100vh;
+  width: 100%;
+  /* -----For Children----- */
+  color: rgb(189, 189, 189);
+  text-shadow: 1px 1px black;
+  border-bottom: 1px solid rgb(20, 20, 20)
+}
+
+
+/* -----Section1----- */
+.section1 {
+  background: url(./media/bg-masthead.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+
+  
+}
+
+#section1-content {
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+#section1-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 75;
+  font-size: 105px;
+  margin-bottom: 0;
+}
+
+#section1-p {
+  max-width: 550px;
+  text-align: center;
+  font-size: 25px;
+}
+
+button {
+  height: 75px;
+  width: 220px;
+  border-radius: 7%;
+  background-color: #64A19D;
+  color: white;
+  font-size: 20px;
+  font-weight: 50;
+  font-stretch: extra-expanded;
+}
+
+/* -----Section2----- */
+.section2 {
+  height: 50vh;
+  padding-top: 5vh;
+  background: 
+    url(./media/ipad.png) no-repeat, 
+    linear-gradient(black, rgb(41, 41, 41));
+  background-position: bottom;
+  background-size: 100vw;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+}
+
+.section2-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#section2-title {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+#section2-p {
+  height: 70px;
+  max-width: 60vw;
+  text-align: center;
+  color: grey;
+  margin: 0;
+}
+
+#section2-p a {
+  text-decoration: none;
+  color: #64A19D;
+  text-justify: distribute;
+}
+
+/* -----Section3----- */
+/* -----Section4----- */
+
+
+/* ---------------Media Queries--------------- */
+
+@media (max-width: 1000px) {
+  .header {
+    background-color: white;
+    color: black;
+    min-width: 500px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header {
+    padding: 0 100px 0 100px;
   }
+
+  .dropdown {
+    display: flex;
+  }
+
+  .nav-links-desktop {
+    display: none;
+  }
+
+  .section1 {
+    height: 600px;
+  }
+
+  .section2 {
+    height: 400px;
+  }
+
+  #section1-title {
+    font-size: 75px;
+  }
+  
+  #section2-title {
+    font-size: 40px;
+  }
+
+
+
+
+
+
+
 }
